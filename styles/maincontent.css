@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 9fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.Sucheuber {
+    grid-column: 0;
+    grid-row: 0;
+}
