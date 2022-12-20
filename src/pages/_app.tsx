@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import { createTheme, NextUIProvider } from "@nextui-org/react";
 import "../../styles/nav.css";
 import "../../styles/globals.css";
-import "../../styles/maincontent.css";
 
 const myDarkTheme = createTheme({
   type: "dark",

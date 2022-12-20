@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { Login, getRolls } from "../DB/db";
+import { Login, getRolls } from "../DB/singolDB";
 export const authOptions = {
   providers: [
     CredentialsProvider({

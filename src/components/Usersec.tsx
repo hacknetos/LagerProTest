@@ -96,14 +96,13 @@ function Unauthorized(
               }}
             />
             <Spacer y={2.5} />
-            <Input
+            <Input.Password
               autoComplete="false"
               name="Password"
               id="Password"
               clearable
               underlined
               labelPlaceholder="Password"
-              type={"password"}
               value={Password}
               onChange={(e) => {
                 setPassword(e.target.value);

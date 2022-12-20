@@ -23,7 +23,6 @@ function GetInigrativNav(session: any) {
 
 export default function Secs() {
   const { data: session, status } = useSession();
-  console.log(session);
   if (status == "loading") {
     return <Loading type="spinner" color={"warning"} />;
   } else if (status == "authenticated") {
