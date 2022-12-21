@@ -20,12 +20,14 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
-    <SessionProvider session={session}>
-      <NextUIProvider theme={myDarkTheme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </NextUIProvider>
-    </SessionProvider>
+    
+      <SessionProvider session={session}>
+        <NextUIProvider theme={myDarkTheme}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </NextUIProvider>
+      </SessionProvider>
+    
   );
 }
