@@ -1,6 +1,8 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { Login, getRolls } from "../DB/singolDB";
+import { Login, getRolls } from "../DB/DB";
+import connection from "../DB/DBcon";
+
 export const authOptions = {
   providers: [
     CredentialsProvider({
@@ -13,14 +15,17 @@ export const authOptions = {
       },
 
       async authorize(credentials, req) {
+       
+
         let res: any = await Login(
           credentials?.username,
-          credentials?.password
+          credentials?.password,
+          connection
         );
         if (res.length <= 0) {
           return null;
         }
-        let rol = await getRolls(res[0].userID.toString());
+        let rol = await getRolls(res[0].userID.toString(),connection);
 
         const user = {
           id: `${res[0].userID}`,

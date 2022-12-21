@@ -1,0 +1,9 @@
+.buttonCell {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+}
+
+.buttonCell button {
+    margin-right: 1%;
+}
